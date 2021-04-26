@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Icon, IconNameType } from '../../primitives';
+import { Flex, Icon } from '../../primitives';
 import { useThemeProps } from '../../../hooks';
 import { MenuItem } from './MenuItem';
 import type { IMenuItemOptionProps, IMenuOptionContextProps } from './types';
@@ -16,7 +16,7 @@ export const MenuItemOption = React.memo(
       onChange(value);
       onPress && onPress(e);
     };
-    let iconName: IconNameType =
+    let iconName =
       type === 'checkbox'
         ? values.includes(value)
           ? 'check-box'
